@@ -188,3 +188,7 @@ This step launches the full integrated simulation setup including both the custo
 ros2 launch my_robot_package spawn_servi.launch.py
 ```
 *Upon execution, Gazebo will open up displaying the simple restaurant world with the mobile service robot automatically spawned at its initial position.*
+
+---
+
+© 2026 Seong-hun Bae.
