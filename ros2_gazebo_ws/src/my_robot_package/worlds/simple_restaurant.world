@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+
+<world name="simple_restaurant">
+
+  <!-- ===================================== -->
+  <!-- Default Environment -->
+  <!-- ===================================== -->
+
+  <include>
+    <uri>model://ground_plane</uri>
+  </include>
+
+  <include>
+    <uri>model://sun</uri>
+  </include>
+
+  <!-- ===================================== -->
+  <!-- Walls -->
+  <!-- ===================================== -->
+
+  <!-- Bottom -->
+  <model name="wall_bottom">
+    <static>true</static>
+    <pose>0 -4 1.25 0 0 0</pose>
+
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>12 0.15 2.5</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>12 0.15 2.5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+
+  <!-- Top -->
+  <model name="wall_top">
+    <static>true</static>
+    <pose>0 4 1.25 0 0 0</pose>
+
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>12 0.15 2.5</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>12 0.15 2.5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+
+  <!-- Left -->
+  <model name="wall_left">
+    <static>true</static>
+    <pose>-6 0 1.25 0 0 0</pose>
+
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.15 8 2.5</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.15 8 2.5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+
+  <!-- Right -->
+  <model name="wall_right">
+    <static>true</static>
+    <pose>6 0 1.25 0 0 0</pose>
+
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.15 8 2.5</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.15 8 2.5</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+
+  <!-- ===================================== -->
+  <!-- Counter -->
+  <!-- ===================================== -->
+
+  <include>
+    <uri>model://counter</uri>
+    <pose>-4.8 0 0 0 0 1.57</pose>
+  </include>
+
+  <!-- ===================================== -->
+  <!-- Top Row Tables -->
+  <!-- ===================================== -->
+
+  <include>
+    <uri>model://table_set</uri>
+	<name>table_set_1</name>
+    <pose>-3.1 2.0 0 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://table_set</uri>
+	<name>table_set_2</name>
+    <pose>-0.7 2.0 0 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://table_set</uri>
+	<name>table_set_3</name>
+    <pose>1.7 2.0 0 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://table_set</uri>
+	<name>table_set_4</name>
+    <pose>4.2 2.0 0 0 0 0</pose>
+  </include>
+
+  <!-- ===================================== -->
+  <!-- Bottom Row Tables -->
+  <!-- ===================================== -->
+
+  <include>
+    <uri>model://table_set</uri>
+	<name>table_set_5</name>
+    <pose>-3.1 -2.0 0 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://table_set</uri>
+	<name>table_set_6</name>
+    <pose>-0.7 -2.0 0 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://table_set</uri>
+	<name>table_set_7</name>
+    <pose>1.7 -2.0 0 0 0 0</pose>
+  </include>
+
+  <include>
+    <uri>model://table_set</uri>
+	<name>table_set_8</name>
+    <pose>4.2 -2.0 0 0 0 0</pose>
+  </include>
+
+  <!-- ===================================== -->
+  <!-- Charging Station -->
+  <!-- ===================================== -->
+
+  <model name="charging_station">
+    <static>true</static>
+
+    <pose>5 -3 0.05 0 0 0</pose>
+
+    <link name="link">
+
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.25</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.25</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </visual>
+
+    </link>
+  </model>
+
+</world>
+</sdf>

@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+
+<model name="table_set">
+
+  <static>true</static>
+
+  <link name="table_set_link">
+
+    <!-- ========================= -->
+    <!-- Table -->
+    <!-- ========================= -->
+
+    <collision name="table_collision">
+      <pose>0 0 0.375 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>1.2 0.6 0.75</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <visual name="table_visual">
+      <pose>0 0 0.375 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>1.2 0.6 0.75</size>
+        </box>
+      </geometry>
+    </visual>
+
+    <!-- ========================= -->
+    <!-- Chair 1 -->
+    <!-- ========================= -->
+
+    <collision name="chair1_collision">
+      <pose>-0.25 0.80 0.225 0 0 0</pose>
+
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>0.45</length>
+        </cylinder>
+      </geometry>
+    </collision>
+
+    <visual name="chair1_visual">
+      <pose>-0.25 0.80 0.225 0 0 0</pose>
+
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>0.45</length>
+        </cylinder>
+      </geometry>
+    </visual>
+
+    <!-- Chair 2 -->
+
+    <collision name="chair2_collision">
+      <pose>0.25 0.80 0.225 0 0 0</pose>
+
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>0.45</length>
+        </cylinder>
+      </geometry>
+    </collision>
+
+    <visual name="chair2_visual">
+      <pose>0.25 0.80 0.225 0 0 0</pose>
+
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>0.45</length>
+        </cylinder>
+      </geometry>
+    </visual>
+
+    <!-- Chair 3 -->
+
+    <collision name="chair3_collision">
+      <pose>-0.25 -0.80 0.225 0 0 0</pose>
+
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>0.45</length>
+        </cylinder>
+      </geometry>
+    </collision>
+
+    <visual name="chair3_visual">
+      <pose>-0.25 -0.80 0.225 0 0 0</pose>
+
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>0.45</length>
+        </cylinder>
+      </geometry>
+    </visual>
+
+    <!-- Chair 4 -->
+
+    <collision name="chair4_collision">
+      <pose>0.25 -0.80 0.225 0 0 0</pose>
+
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>0.45</length>
+        </cylinder>
+      </geometry>
+    </collision>
+
+    <visual name="chair4_visual">
+      <pose>0.25 -0.80 0.225 0 0 0</pose>
+
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>0.45</length>
+        </cylinder>
+      </geometry>
+    </visual>
+
+  </link>
+
+</model>
+</sdf>
