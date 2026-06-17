@@ -1,0 +1,37 @@
+# ============================================================
+# docker-compose.yml
+# Purpose:
+#    Windows 10 + Docker Desktop 환경에서
+#    로컬 폴더 전체를 컨테이너 홈(/root)에 직접 연동 (workspace 포함)
+# ============================================================
+
+services:
+  robot-sim:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: robot-sim-bridge:humble-mujoco-3.6.0
+    container_name: robot-sim-bridge
+
+    stdin_open: true
+    tty: true
+    network_mode: bridge
+
+    environment:
+      - DISPLAY=host.docker.internal:0.0
+      - QT_X11_NO_MITSHM=1
+      - LIBGL_ALWAYS_INDIRECT=0
+      - ROS_DOMAIN_ID=30
+
+# --------------------------------------------------------
+# [완벽 연동] 내 컴퓨터 현재 폴더 전체를 /root에 매핑하여 
+# ros2_gazebo_ws와 workspace 폴더를 모두 루트에서 다이렉트 연동함
+# --------------------------------------------------------
+    # 내 컴퓨터의 ./ros2_gazebo_ws 폴더를 컨테이너의 /workspace/ros2_gazebo_ws 에만 연결
+    volumes:
+      - ./ros2_gazebo_ws:/workspace/ros2_gazebo_ws
+    
+    # 터미널 접속 시 시작 위치 지정
+    working_dir: /workspace/ros2_gazebo_ws
+    command: /bin/bash
