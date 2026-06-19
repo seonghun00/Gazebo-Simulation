@@ -1,116 +1,77 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
-
 <world name="simple_restaurant">
 
-  <!-- ===================================== -->
-  <!-- Default Environment -->
-  <!-- ===================================== -->
+  <!-- ====================== GUI 카메라 설정 ====================== -->
+  <gui>
+    <camera name="user_camera">
+      <pose>-20 0 20 0 0.8 0</pose>   <!-- 앞,뒤 / 왼,오 / 위,아래 / roll / pitch / yaw -->
+    </camera>
+  </gui>
 
+  <!-- Default Environment -->
   <include>
     <uri>model://ground_plane</uri>
   </include>
-
   <include>
     <uri>model://sun</uri>
   </include>
 
   <!-- ===================================== -->
-  <!-- Walls -->
+  <!-- Walls - 정확히 맞춤 -->
   <!-- ===================================== -->
-
-  <!-- Bottom -->
+  <!-- Bottom Wall -->
   <model name="wall_bottom">
     <static>true</static>
-    <pose>0 -4 1.25 0 0 0</pose>
-
+    <pose>0 -6.0 1.25 0 0 0</pose>
     <link name="link">
       <collision name="collision">
-        <geometry>
-          <box>
-            <size>12 0.15 2.5</size>
-          </box>
-        </geometry>
+        <geometry><box><size>16 0.2 2.5</size></box></geometry>
       </collision>
-
       <visual name="visual">
-        <geometry>
-          <box>
-            <size>12 0.15 2.5</size>
-          </box>
-        </geometry>
+        <geometry><box><size>16 0.2 2.5</size></box></geometry>
       </visual>
     </link>
   </model>
 
-  <!-- Top -->
+  <!-- Top Wall -->
   <model name="wall_top">
     <static>true</static>
-    <pose>0 4 1.25 0 0 0</pose>
-
+    <pose>0 6.0 1.25 0 0 0</pose>
     <link name="link">
       <collision name="collision">
-        <geometry>
-          <box>
-            <size>12 0.15 2.5</size>
-          </box>
-        </geometry>
+        <geometry><box><size>16 0.2 2.5</size></box></geometry>
       </collision>
-
       <visual name="visual">
-        <geometry>
-          <box>
-            <size>12 0.15 2.5</size>
-          </box>
-        </geometry>
+        <geometry><box><size>16 0.2 2.5</size></box></geometry>
       </visual>
     </link>
   </model>
 
-  <!-- Left -->
+  <!-- Left Wall -->
   <model name="wall_left">
     <static>true</static>
-    <pose>-6 0 1.25 0 0 0</pose>
-
+    <pose>-8.0 0 1.25 0 0 0</pose>
     <link name="link">
       <collision name="collision">
-        <geometry>
-          <box>
-            <size>0.15 8 2.5</size>
-          </box>
-        </geometry>
+        <geometry><box><size>0.2 12.2 2.5</size></box></geometry>
       </collision>
-
       <visual name="visual">
-        <geometry>
-          <box>
-            <size>0.15 8 2.5</size>
-          </box>
-        </geometry>
+        <geometry><box><size>0.2 12.2 2.5</size></box></geometry>
       </visual>
     </link>
   </model>
 
-  <!-- Right -->
+  <!-- Right Wall -->
   <model name="wall_right">
     <static>true</static>
-    <pose>6 0 1.25 0 0 0</pose>
-
+    <pose>8.0 0 1.25 0 0 0</pose>
     <link name="link">
       <collision name="collision">
-        <geometry>
-          <box>
-            <size>0.15 8 2.5</size>
-          </box>
-        </geometry>
+        <geometry><box><size>0.2 12.2 2.5</size></box></geometry>
       </collision>
-
       <visual name="visual">
-        <geometry>
-          <box>
-            <size>0.15 8 2.5</size>
-          </box>
-        </geometry>
+        <geometry><box><size>0.2 12.2 2.5</size></box></geometry>
       </visual>
     </link>
   </model>
@@ -118,97 +79,58 @@
   <!-- ===================================== -->
   <!-- Counter -->
   <!-- ===================================== -->
-
   <include>
     <uri>model://counter</uri>
-    <pose>-4.8 0 0 0 0 1.57</pose>
+    <pose>-5.5 0 0 0 0 1.57</pose>
   </include>
 
-  <!-- ===================================== -->
   <!-- Top Row Tables -->
-  <!-- ===================================== -->
-
   <include>
-    <uri>model://table_set</uri>
-	<name>table_set_1</name>
-    <pose>-3.1 2.0 0 0 0 0</pose>
+    <uri>model://table_set</uri><name>table_set_1</name>
+    <pose>-4.0 3.0 0 0 0 0</pose>
+  </include>
+  <include>
+    <uri>model://table_set</uri><name>table_set_2</name>
+    <pose>-1.0 3.0 0 0 0 0</pose>
+  </include>
+  <include>
+    <uri>model://table_set</uri><name>table_set_3</name>
+    <pose>2.0 3.0 0 0 0 0</pose>
+  </include>
+  <include>
+    <uri>model://table_set</uri><name>table_set_4</name>
+    <pose>5.0 3.0 0 0 0 0</pose>
   </include>
 
-  <include>
-    <uri>model://table_set</uri>
-	<name>table_set_2</name>
-    <pose>-0.7 2.0 0 0 0 0</pose>
-  </include>
-
-  <include>
-    <uri>model://table_set</uri>
-	<name>table_set_3</name>
-    <pose>1.7 2.0 0 0 0 0</pose>
-  </include>
-
-  <include>
-    <uri>model://table_set</uri>
-	<name>table_set_4</name>
-    <pose>4.2 2.0 0 0 0 0</pose>
-  </include>
-
-  <!-- ===================================== -->
   <!-- Bottom Row Tables -->
-  <!-- ===================================== -->
-
   <include>
-    <uri>model://table_set</uri>
-	<name>table_set_5</name>
-    <pose>-3.1 -2.0 0 0 0 0</pose>
+    <uri>model://table_set</uri><name>table_set_5</name>
+    <pose>-4.0 -3.0 0 0 0 0</pose>
+  </include>
+  <include>
+    <uri>model://table_set</uri><name>table_set_6</name>
+    <pose>-1.0 -3.0 0 0 0 0</pose>
+  </include>
+  <include>
+    <uri>model://table_set</uri><name>table_set_7</name>
+    <pose>2.0 -3.0 0 0 0 0</pose>
+  </include>
+  <include>
+    <uri>model://table_set</uri><name>table_set_8</name>
+    <pose>5.0 -3.0 0 0 0 0</pose>
   </include>
 
-  <include>
-    <uri>model://table_set</uri>
-	<name>table_set_6</name>
-    <pose>-0.7 -2.0 0 0 0 0</pose>
-  </include>
-
-  <include>
-    <uri>model://table_set</uri>
-	<name>table_set_7</name>
-    <pose>1.7 -2.0 0 0 0 0</pose>
-  </include>
-
-  <include>
-    <uri>model://table_set</uri>
-	<name>table_set_8</name>
-    <pose>4.2 -2.0 0 0 0 0</pose>
-  </include>
-
-  <!-- ===================================== -->
   <!-- Charging Station -->
-  <!-- ===================================== -->
-
   <model name="charging_station">
     <static>true</static>
-
-    <pose>5 -3 0.05 0 0 0</pose>
-
+    <pose>7.0 -5.0 0.05 0 0 0</pose>
     <link name="link">
-
       <collision name="collision">
-        <geometry>
-          <cylinder>
-            <radius>0.25</radius>
-            <length>0.1</length>
-          </cylinder>
-        </geometry>
+        <geometry><cylinder><radius>0.25</radius><length>0.1</length></cylinder></geometry>
       </collision>
-
       <visual name="visual">
-        <geometry>
-          <cylinder>
-            <radius>0.25</radius>
-            <length>0.1</length>
-          </cylinder>
-        </geometry>
+        <geometry><cylinder><radius>0.25</radius><length>0.1</length></cylinder></geometry>
       </visual>
-
     </link>
   </model>
 
