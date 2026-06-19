@@ -1,6 +1,6 @@
 # 모바일 로봇 간이 레스토랑 시뮬레이션
 
-#### [English](README.md) | Korean
+#### [English](README.md) | 한국어
 
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![ROS2](https://img.shields.io/badge/ROS2-Humble-blue)
