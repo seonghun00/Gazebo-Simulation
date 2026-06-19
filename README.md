@@ -1,6 +1,6 @@
-# Mobile Robot Cafe Simulation
+# Mobile Robot restaurant Simulation
 
-#### English | [Korean](README.ko.md)
+#### English | [한국어](README.ko.md)
 
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![ROS2](https://img.shields.io/badge/ROS2-Humble-blue)
@@ -35,11 +35,12 @@ This project is designed to verify the driving performance and sensor operations
 ### Mobile Robot Model
 <img width="1280" height="688" alt="빈월드 서빙로봇" src="https://github.com/user-attachments/assets/7acf06bd-3825-44f7-9a45-ec2eab9c51fa" />
 
-*servi_model.urdf spawned in an empty world*
+<p align="center"><i>Fig1. servi_model.urdf spawned in an empty world</i></p>
 
 ### Restaurant Simulation Environment
 <img width="1400" height="784" alt="레스토랑 안 서빙로봇" src="https://github.com/user-attachments/assets/61a68b0c-fcf5-49a2-88d2-f2a917c236b4" />
-*Mobile robot operating within the Gazebo simple restaurant environment*
+
+<p align="center"><i>Fig2. Mobile robot operating within the Gazebo simple restaurant environment</i></p>
 
 ---
 
@@ -188,3 +189,7 @@ This step launches the full integrated simulation setup including both the custo
 ros2 launch my_robot_package spawn_servi.launch.py
 ```
 *Upon execution, Gazebo will open up displaying the simple restaurant world with the mobile service robot automatically spawned at its initial position.*
+
+---
+
+© 2026 Seong-hun Bae.

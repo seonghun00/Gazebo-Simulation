@@ -1,12 +1,12 @@
 # 모바일 로봇 간이 레스토랑 시뮬레이션
 
-#### [English](README.md) | Korean
+#### [English](README.md) | 한국어
 
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![ROS2](https://img.shields.io/badge/ROS2-Humble-blue)
 ![Gazebo](https://img.shields.io/badge/Gazebo-11-orange)
 
-> 본 저장소는 ROS 2 및 Gazebo 학습을 목적으로 만들어진 repo 입니다.
+> 본 저장소는 ROS 2 및 Gazebo 학습을 목적으로 만들어진 repo 입니다. 
 
 본 프로젝트는 카페, 레스토랑 환경에서 서비스 로봇의 주행 및 센서 동작을 검증하기 위해 제작되었습니다. Docker 기반으로 구성하여 별도의 ROS 2 설치 없이 동일한 개발 환경에서 실행할 수 있습니다.
 
@@ -29,12 +29,14 @@
 ## Preview
 
 ### Mobile Robot Model
-<img width="1280" height="688" alt="image" src="https://github.com/user-attachments/assets/4669417f-c91b-45aa-be82-97bd5f58ad8b" />
-*빈 월드에서 생성된 servi_model.urdf*
+<img width="1280" height="688" alt="image" src="https://github.com/user-attachments/assets/4669417f-c91b-45aa-be82-97bd5f58ad8b" />   
+
+<p align="center"><i>Fig1. 빈 월드에서 생성된 servi_model.urdf</i></p>
 
 ### Restaurant Simulation Environment
-<img width="1400" height="784" alt="image" src="https://github.com/user-attachments/assets/df643983-58ed-4f1b-93e2-3cfa0f024ed9" />
-*Gazebo 간이 레스토랑 환경에서 동작하는 모바일 로봇*
+<img width="1400" height="784" alt="image" src="https://github.com/user-attachments/assets/df643983-58ed-4f1b-93e2-3cfa0f024ed9" />   
+
+<p align="center"><i>Fig2. Gazebo 간이 레스토랑 환경에서 동작하는 모바일 로봇</i></p>
 
 ---
 
@@ -179,3 +181,5 @@ ros2 launch my_robot_package spawn_servi.launch.py
 실행 후 Gazebo가 시작되며 간이 레스토랑 환경과 모바일 서비스 로봇이 함께 생성됩니다.
 
 ---
+
+© 2026 Seong-hun Bae.
