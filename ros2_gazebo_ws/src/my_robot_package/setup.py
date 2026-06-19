@@ -9,14 +9,18 @@ setup(
     version='0.0.0',
     packages=[package_name],
     data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
+        ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        
-        # 여기가 제일 중요한 핵심. 파일들을 install 경로로 복사하는 규칙
+
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
         (os.path.join('share', package_name, 'urdf'), glob('urdf/*.urdf')),
         (os.path.join('share', package_name, 'worlds'), glob('worlds/*.world')),
+
+        # models 폴더는 아래 방식으로 설치 (가장 안정적)
+        (os.path.join('share', package_name, 'models/chair'), glob('models/chair/*')),
+        (os.path.join('share', package_name, 'models/counter'), glob('models/counter/*')),
+        (os.path.join('share', package_name, 'models/table'), glob('models/table/*')),
+        (os.path.join('share', package_name, 'models/table_set'), glob('models/table_set/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,8 +30,6 @@ setup(
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [
-            'servi_control = my_robot_package.servi_control:main',
-        ],
+        'console_scripts': [],
     },
 )
