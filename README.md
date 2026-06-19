@@ -1,6 +1,6 @@
 # Mobile Robot restaurant Simulation
 
-#### English | [Korean](README.ko.md)
+#### English | [한국어](README.ko.md)
 
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![ROS2](https://img.shields.io/badge/ROS2-Humble-blue)
