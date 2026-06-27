@@ -34,7 +34,7 @@
 <p align="center"><i>Fig1. 빈 월드에서 생성된 servi_model.urdf</i></p>
 
 ### Restaurant Simulation Environment
-<img width="1400" height="784" alt="image" src="https://github.com/user-attachments/assets/df643983-58ed-4f1b-93e2-3cfa0f024ed9" />   
+<img width="1135" height="632" alt="레스토랑 안 서빙로봇 사진" src="https://github.com/user-attachments/assets/18cd1fd5-2552-4157-8d3b-9ba77c6d9e89" />
 
 <p align="center"><i>Fig2. Gazebo 간이 레스토랑 환경에서 동작하는 모바일 로봇</i></p>
 
