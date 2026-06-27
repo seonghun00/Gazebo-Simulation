@@ -38,7 +38,8 @@ This project is designed to verify the driving performance and sensor operations
 <p align="center"><i>Fig1. servi_model.urdf spawned in an empty world</i></p>
 
 ### Restaurant Simulation Environment
-<img width="1400" height="784" alt="레스토랑 안 서빙로봇" src="https://github.com/user-attachments/assets/61a68b0c-fcf5-49a2-88d2-f2a917c236b4" />
+<img width="1135" height="632" alt="레스토랑 안 서빙로봇 사진" src="https://github.com/user-attachments/assets/75729a63-e1d2-4441-9135-0f9ffe96fb54" />
+
 
 <p align="center"><i>Fig2. Mobile robot operating within the Gazebo simple restaurant environment</i></p>
 
